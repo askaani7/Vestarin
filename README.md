@@ -145,13 +145,13 @@ _Milestones_
 
 ### Test audit
 
-## Investors
+#### Investors
 
-### Presale
+##### Presale
 * _0x4755815de8906C49b05705a06e8788bfE3bCaa33_ - 0.1 ETH invested => 30 VST tokens, transaction: https://kovan.etherscan.io/tx/0xca5e12e1f1c22270cbf02d59258fa36cf43eac75e25c88798b44719dd80e8752, 0.07 ETH => to master wallet, 0.03 to slave wallet
 * _0xb8600b335332724Df5108Fc0595002409c2ADbC6_ - 1.12 ETH invested => 336 VST tokens, https://kovan.etherscan.io/tx/0x0d981d4d59adb076a4638aac73f34a6d9311e1bc38130b711b2b7f7c27c056e2, 0.784 ETH => to master wallet, 0.336 to slave wallet
 
-## Transfer tokens transactions
+#### Transfer tokens transactions
 1. From presale investor 0x4755815de8906C49b05705a06e8788bfE3bCaa33 to 0x1c71b977B7908f5853E082Cfae8aC217Fc6Dd5Bc transfer 10 tokens: https://kovan.etherscan.io/tx/0x0d981d4d59adb076a4638aac73f34a6d9311e1bc38130b711b2b7f7c27c056e2
  
 
