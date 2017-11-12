@@ -1,7 +1,6 @@
-<p align="center">
-  <h1> Vestarin </h1>
-  <img src="./logo.png">
-</p>
+# Vestarin
+
+![Vestarin](logo.png "Vesatrin")
 
 
 * _Standart_        : ERC20
