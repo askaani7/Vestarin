@@ -1,6 +1,7 @@
 pragma solidity ^0.4.18;
 
 import './CommonSale.sol';
+import './Mainsale.sol';
 
 contract Presale is CommonSale {
 

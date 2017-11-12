@@ -2,7 +2,6 @@ pragma solidity ^0.4.18;
 
 import './StagedCrowdsale.sol';
 import './VestarinToken.sol';
-import './Mainsale.sol';
 
 contract CommonSale is StagedCrowdsale {
 
