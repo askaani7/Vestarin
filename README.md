@@ -1,7 +1,6 @@
-# Vestarin
-
 ![Vestarin](logo.png "Vesatrin")
 
+# Vestarin smart contract
 
 * _Standart_        : ERC20
 * _Name_            : Vestarin
