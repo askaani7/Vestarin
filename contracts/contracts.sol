@@ -304,9 +304,9 @@ contract Pausable is Ownable {
   }
 }
 
-contract VestinToken is MintableToken {	
+contract VestarinToken is MintableToken {	
     
-  string public constant name = "Vestin";
+  string public constant name = "Vestarin";
    
   string public constant symbol = "VST";
     
@@ -449,7 +449,7 @@ contract CommonSale is StagedCrowdsale {
 
   uint public totalTokensMinted;
 
-  VestinToken public token;
+  VestarinToken public token;
   
   function setMinPrice(uint newMinPrice) public onlyOwner {
     minPrice = newMinPrice;
@@ -468,7 +468,7 @@ contract CommonSale is StagedCrowdsale {
   }
   
   function setToken(address newToken) public onlyOwner {
-    token = VestinToken(newToken);
+    token = VestarinToken(newToken);
   }
 
   function createTokens() public whenNotPaused payable {
@@ -573,14 +573,14 @@ contract Mainsale is CommonSale {
 
 contract TestConfigurator is Ownable {
 
-  VestinToken public token; 
+  VestarinToken public token; 
 
   Presale public presale;
 
   Mainsale public mainsale;
 
   function deploy() public onlyOwner {
-    token = new VestinToken();
+    token = new VestarinToken();
 
     presale = new Presale();
 
@@ -589,7 +589,7 @@ contract TestConfigurator is Ownable {
     presale.setMasterWallet(0x055fa3f2DAc0b9Db661A4745965DDD65490d56A8);
     presale.setSlaveWallet(0x055fa3f2DAc0b9Db661A4745965DDD65490d56A8);
     presale.setSlaveWalletPercent(30);
-    presale.setStart(1507208400);
+    presale.setStart(1510444800);
     presale.setPeriod(2);
     presale.setMinPrice(100000000000000000);
     token.setSaleAgent(presale);	
@@ -622,14 +622,14 @@ contract TestConfigurator is Ownable {
 
 contract Configurator is Ownable {
 
-  VestinToken public token; 
+  VestarinToken public token; 
 
   Presale public presale;
 
   Mainsale public mainsale;
 
   function deploy() public onlyOwner {
-    token = new VestinToken();
+    token = new VestarinToken();
 
     presale = new Presale();
 
@@ -637,8 +637,8 @@ contract Configurator is Ownable {
     presale.addStage(5000,300);
     presale.setMasterWallet(0x0);
     presale.setSlaveWallet(0x0);
-    mainsale.setSlaveWalletPercent(30);
-    presale.setStart(1508504400);
+    presale.setSlaveWalletPercent(30);
+    presale.setStart(1517317200);
     presale.setPeriod(30);
     presale.setMinPrice(100000000000000000);
     token.setSaleAgent(presale);	
@@ -657,7 +657,7 @@ contract Configurator is Ownable {
     mainsale.setSlaveWalletPercent(30);
     mainsale.setFoundersTokensWallet(0x0);
     mainsale.setBountyTokensWallet(0x0);
-    mainsale.setStart(1511528400);
+    mainsale.setStart(1525352400);
     mainsale.setPeriod(30);
     mainsale.setLockPeriod(90);
     mainsale.setMinPrice(100000000000000000);
