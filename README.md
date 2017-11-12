@@ -49,8 +49,8 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 Maximum tokens can mint - 20 000 000 VST 
 * on all crowdsales : 82% or 16 500 000 VST 
-** on presale : 7% or 1 500 000 VST 
-** on mainsale : 75% or 15 000 000 VST
+* on presale : 7% or 1 500 000 VST 
+* on mainsale : 75% or 15 000 000 VST
 * to founders : 13% or 2 500 000 VST
 * to bounty : 5% or 1 000 000 VST
 
