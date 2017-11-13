@@ -149,6 +149,14 @@ _Milestones_
 * _0x4755815de8906C49b05705a06e8788bfE3bCaa33_ - 0.1 ETH invested => 30 VST tokens, transaction: https://kovan.etherscan.io/tx/0xca5e12e1f1c22270cbf02d59258fa36cf43eac75e25c88798b44719dd80e8752, 0.07 ETH => to master wallet, 0.03 to slave wallet
 * _0xb8600b335332724Df5108Fc0595002409c2ADbC6_ - 1.12 ETH invested => 336 VST tokens, https://kovan.etherscan.io/tx/0x0d981d4d59adb076a4638aac73f34a6d9311e1bc38130b711b2b7f7c27c056e2, 0.784 ETH => to master wallet, 0.336 to slave wallet
 
+##### Mainsale
+* _0x87f2f8a94986D9049147590E12a64fFaa9f946A8_ - 0.5 ETH invested => 100 VST tokens, transaction: https://kovan.etherscan.io/tx/0xf9d926677cd77f7272177489969362989335bb7821fd9a550a8038de51e2d2aa, 0.07 ETH => to master wallet, 0.03 to slave wallet
+* _0xb8600b335332724Df5108Fc0595002409c2ADbC6_ - 1 ETH invested => 200 VST tokens, transaction: https://kovan.etherscan.io/tx/0x7c2cb4bf53ace3a3ba0caef1c439f1dc41ac487dae5fa40a4b3d625e738cc36f, 0.7 ETH => to master wallet, 0.3 to slave wallet
+
+##### Service operations
+* Presale finishMinting: https://kovan.etherscan.io/tx/0x233007ddea630515cca6ce7076c68a50475640cee1109d8baa4ffcfedb3665cd
+
+
 #### Transfer tokens transactions
 1. From presale investor 0x4755815de8906C49b05705a06e8788bfE3bCaa33 to 0x1c71b977B7908f5853E082Cfae8aC217Fc6Dd5Bc transfer 10 tokens: https://kovan.etherscan.io/tx/0x0d981d4d59adb076a4638aac73f34a6d9311e1bc38130b711b2b7f7c27c056e2
  
