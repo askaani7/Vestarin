@@ -471,6 +471,12 @@ contract CommonSale is StagedCrowdsale {
     token = VestarinToken(newToken);
   }
 
+  function mintTokensManually(address to, uint amount) public whenNotPaused onlyOwner {
+    require(amount > 0);
+    token.mint(this, amount);
+    token.transfer(to, amount);
+  }
+
   function createTokens() public whenNotPaused payable {
     require(msg.value >= minPrice);
     uint stageIndex = currentStage();
