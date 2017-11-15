@@ -7,7 +7,7 @@ import './Presale.sol';
 import './Mainsale.sol';
 
 contract Configurator is Ownable {
-/*
+
   VestarinToken public token; 
 
   Presale public presale;
@@ -15,14 +15,16 @@ contract Configurator is Ownable {
   Mainsale public mainsale;
 
   function deploy() public onlyOwner {
+    owner = 0x95EA6A4ec9F80436854702e5F05d238f27166A03;
+
     token = new VestarinToken();
 
     presale = new Presale();
 
     presale.setToken(token);
     presale.addStage(5000,300);
-    presale.setMasterWallet(0x0);
-    presale.setSlaveWallet(0x0);
+    presale.setMasterWallet(0x95EA6A4ec9F80436854702e5F05d238f27166A03);
+    presale.setSlaveWallet(0x070EcC35a3212D76ad443d529216a452eAA35E3D);
     presale.setSlaveWalletPercent(30);
     presale.setStart(1517317200);
     presale.setPeriod(30);
@@ -38,11 +40,11 @@ contract Configurator is Ownable {
     mainsale.addStage(20000,160);
     mainsale.addStage(20000,150);
     mainsale.addStage(40000,130);
-    mainsale.setMasterWallet(0x0);
-    mainsale.setSlaveWallet(0x0);
+    mainsale.setMasterWallet(0x95EA6A4ec9F80436854702e5F05d238f27166A03);
+    mainsale.setSlaveWallet(0x070EcC35a3212D76ad443d529216a452eAA35E3D);
     mainsale.setSlaveWalletPercent(30);
-    mainsale.setFoundersTokensWallet(0x0);
-    mainsale.setBountyTokensWallet(0x0);
+    mainsale.setFoundersTokensWallet(0x95EA6A4ec9F80436854702e5F05d238f27166A03);
+    mainsale.setBountyTokensWallet(0x95EA6A4ec9F80436854702e5F05d238f27166A03);
     mainsale.setStart(1525352400);
     mainsale.setPeriod(30);
     mainsale.setLockPeriod(90);
@@ -56,6 +58,6 @@ contract Configurator is Ownable {
     presale.transferOwnership(owner);
     mainsale.transferOwnership(owner);
   }
-*/
+
 }
 

@@ -31,7 +31,7 @@ To start working with contract you should follow next steps:
 Contract manager must call finishMinting after each crowdsale milestone! 
 
 ### How to invest
-To purchase tokens investor should send ETH (more than minimum 0.1 EHT) to corresponding crowdsale contract.
+To purchase tokens investor should send ETH (more than minimum 0.1 ETH) to corresponding crowdsale contract.
 Recommended GAS: 250000, GAS PRICE - 21 Gwei.
 
 ### Wallets with ERC20 support
@@ -99,7 +99,7 @@ _Milestones_
 6. hardcap 40000 ETH, price 130 per ETH
 
 
-## Kovan network configuration
+## Kovan network configuration 1
 
 * _Minimal insvested limit_     : 0.1 ETH
 * _Bounty tokens percent_       : 5% of Presale tokens
@@ -160,5 +160,63 @@ _Milestones_
 #### Transfer tokens transactions
 1. From presale investor 0x4755815de8906C49b05705a06e8788bfE3bCaa33 to 0x1c71b977B7908f5853E082Cfae8aC217Fc6Dd5Bc transfer 10 tokens: https://kovan.etherscan.io/tx/0x0d981d4d59adb076a4638aac73f34a6d9311e1bc38130b711b2b7f7c27c056e2
  
+## Kovan network configuration 2
+
+* _Minimal insvested limit_     : 0.1 ETH
+* _Bounty tokens percent_       : 5% of Presale tokens
+* _Founders tokens percent_     : 13% of Presale tokens
+* _For sale tokens percent_     : 82% of Presale tokens
+* _Founders tokens wallet_      : 0x67d78DE2f2819dcBd47426A1ac6a23B9e9C9d300
+* _Bounty tokens wallet_        : 0x772215cCF488031991f7DCC65e80A7C1FD497E75
+* _Founders tokens lock period_ : 2 days
+
+### Links
+1. _Token_ - https://kovan.etherscan.io/token/0x65e609e3b5243db7100fcfe584001da1e47d75bd
+2. _Presale_ - https://kovan.etherscan.io/address/0x7cf99c9d984fe368bb4c35170a0e5f51a620d66b
+3. _Mainsale_ - https://kovan.etherscan.io/address/0x322b22306892e1febfd41f71729ec31ffb320e2d
+
+### Crowdsale stages
+
+#### Presale
+* _Hardcap_                    : 5 ETH
+* _Price_                      : 300 VST
+* _Period_                     : 30 days
+* _Start_                      : 15.11.2017 00:00 GMT
+* _Master wallet_              : 0x66fF3b89e15ACB0B5e69179a2e54c494b89bdB1B
+* _Slave wallet_               : 0x54a67F1507dEb1BFc58ba3ffa94B59fC50EB74BC
+* _Master wallet percent_      : 70%
+* _Slave wallet percent_       : 30%
+* _Contract owner_             : 0x445c94f566abF8E28739c474c572D356d03Ad999
+
+#### ICO
+* _Hardcap_                    : 3 ETH
+* _Period_                     : 30 days
+* _Start_                      : 16.11.2017 0:00:00 GMT
+* _Master wallet_              : 0xD1BC33B2c89C93E65b0D476B8b50BFee82594847
+* _Slave wallet_               : 0xE619BCD3c4609AE269B5eBE5bf0cb7D1Dc70C210
+* _Master wallet percent_      : 70%
+* _Slave wallet percent_       : 30%
+* _Contract owner_             : 0x445c94f566abF8E28739c474c572D356d03Ad999
+
+_Milestones_
+1. hardcap 1 ETH, price 200 per ETH
+2. hardcap 2 ETH, price 100 per ETH
+
+### Test audit
+
+#### Investors
+
+##### Presale
+* _0xb8600b335332724Df5108Fc0595002409c2ADbC6_ - 0.1 ETH invested => 30 VST tokens, transaction: https://kovan.etherscan.io/tx/0x1405486d1846797e028606aaa399f559695d82ada94f6d243a126ef0fef17cf9, 0.07 ETH => to master wallet, 0.03 to slave wallet
+* _0x4755815de8906C49b05705a06e8788bfE3bCaa33_ - 1.2 ETH invested => 60 VST tokens, https://kovan.etherscan.io/tx/0xa09d43edc039d71bb2a1502694fa6bf32ba32cde1d2138b4fb44a832fd377de8, 0.14 ETH => to master wallet, 0.06 to slave wallet
+
+##### Mainsale
+
+##### Service operations
+* Presale finishMinting: https://kovan.etherscan.io/tx/0xdc63e5aaaed73388b62b530ef5f1f771cb896a95072dbd82874684e3c0fbcbd7
+
+#### Transfer tokens transactions
+ 
+
 
 

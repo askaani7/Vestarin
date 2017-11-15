@@ -8,6 +8,8 @@ contract CommonSale is StagedCrowdsale {
   address public masterWallet;
 
   address public slaveWallet;
+  
+  address public directMintAgent;
 
   uint public slaveWalletPercent = 30;
 
@@ -16,15 +18,30 @@ contract CommonSale is StagedCrowdsale {
   uint public minPrice;
 
   uint public totalTokensMinted;
+  
+  bool public slaveWalletInitialized;
+  
+  bool public slaveWalletPercentInitialized;
 
   VestarinToken public token;
+  
+  modifier onlyDirectMintAgentOrOwner() {
+    require(directMintAgent == msg.sender || owner == msg.sender);
+    _;
+  }
+  
+  function setDirectMintAgent(address newDirectMintAgent) public onlyOwner {
+    directMintAgent = newDirectMintAgent;
+  }
   
   function setMinPrice(uint newMinPrice) public onlyOwner {
     minPrice = newMinPrice;
   }
 
   function setSlaveWalletPercent(uint newSlaveWalletPercent) public onlyOwner {
+    require(!slaveWalletPercentInitialized);
     slaveWalletPercent = newSlaveWalletPercent;
+    slaveWalletPercentInitialized = true;
   }
 
   function setMasterWallet(address newMasterWallet) public onlyOwner {
@@ -32,33 +49,37 @@ contract CommonSale is StagedCrowdsale {
   }
 
   function setSlaveWallet(address newSlaveWallet) public onlyOwner {
+    require(!slaveWalletInitialized);
     slaveWallet = newSlaveWallet;
+    slaveWalletInitialized = true;
   }
   
   function setToken(address newToken) public onlyOwner {
     token = VestarinToken(newToken);
   }
 
-  function mintTokensManually(address to, uint amount) public whenNotPaused onlyOwner {
-    require(amount > 0);
-    token.mint(this, amount);
-    token.transfer(to, amount);
+  function directMint(address to, uint investedWei) public onlyDirectMintAgentOrOwner saleIsOn {
+    mintTokens(to, investedWei);
   }
 
   function createTokens() public whenNotPaused payable {
     require(msg.value >= minPrice);
-    uint stageIndex = currentStage();
     uint masterValue = msg.value.mul(percentRate.sub(slaveWalletPercent)).div(percentRate);
     uint slaveValue = msg.value.sub(masterValue);
     masterWallet.transfer(masterValue);
     slaveWallet.transfer(slaveValue);
+    mintTokens(msg.sender, msg.value);
+  }
+
+  function mintTokens(address to, uint weiInvested) internal {
+    uint stageIndex = currentStage();
     Stage storage stage = stages[stageIndex];
-    uint tokens = msg.value.mul(stage.price);
+    uint tokens = weiInvested.mul(stage.price);
     token.mint(this, tokens);
-    token.transfer(msg.sender, tokens);
+    token.mint(to, tokens);
     totalTokensMinted = totalTokensMinted.add(tokens);
-    totalInvested = totalInvested.add(msg.value);
-    stage.invested = stage.invested.add(msg.value);
+    totalInvested = totalInvested.add(weiInvested);
+    stage.invested = stage.invested.add(weiInvested);
     if(stage.invested >= stage.hardcap) {
       stage.closed = now;
     }
@@ -72,6 +93,7 @@ contract CommonSale is StagedCrowdsale {
     ERC20 alienToken = ERC20(anotherToken);
     alienToken.transfer(to, alienToken.balanceOf(this));
   }
+
 
 }
 
