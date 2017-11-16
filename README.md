@@ -213,11 +213,25 @@ _Milestones_
 ##### Mainsale
 * _0xb8600b335332724Df5108Fc0595002409c2ADbC6_ - 1.1 ETH invested => 220 VST tokens, transaction: https://kovan.etherscan.io/tx/0x627fd2f06d2719072e35583983b87d959f0aa46b374f2a1abfdeba43c25c1e2c, 0.77 ETH => to master wallet, 0.33 to slave wallet
 * Driect mint transaction: https://kovan.etherscan.io/tx/0x3a4a1dcd5fcb98e05206c617fd839f1aaf4122aa10fdb7b260e90224e29eeb8d, driect invested 1 ETH, minted 100 VST to 0xb8600b335332724Df5108Fc0595002409c2ADbC6
+* Direct mint after change direct mint agent: https://kovan.etherscan.io/tx/0x296351a4f0787e1d8d1b126c272cef42b4a41948dc5052009f4fe5f050251fcd, direct invested 0.5 EHT, minted 50 VST to 0x4755815de8906C49b05705a06e8788bfE3bCaa33
+* Can't change direct mint from not authorized address: https://kovan.etherscan.io/tx/0x6694520fb6bb1d97d74a987ff130b12b8c816c3fdceffa84e1a84fda09339dab
+* _0x59b398bBED1CC6c82b337B3Bd0ad7e4dCB7d4de3_ - 1.05 ETH invested => 105 VST tokens, transaction: https://kovan.etherscan.io/tx/0x8bb584b986296c2aa18154ecb32b7801e7b6834b47f762bb1aaedaf21a213b04, 0.735 to master wallet, 0.315 to slave wallet
+* Can't invest after hardcap reached: https://kovan.etherscan.io/tx/0xe20db27b2fbbd5c04b922ed53f3e29da3db3814c56b542832f5cb56df6ee1e79
 
 ##### Service operations
 * Presale finishMinting: https://kovan.etherscan.io/tx/0xdc63e5aaaed73388b62b530ef5f1f771cb896a95072dbd82874684e3c0fbcbd7
+* Change direct mint agent: https://kovan.etherscan.io/tx/0xc03deb6f9e499719350eda8199a8a0cdeecfb2e590efd0b0963721256b1ce992
+* Can't change direct mint agent form not authorized address: https://kovan.etherscan.io/tx/0x71f990d79522e0417e7044b6934362d29c0f1ef742c9cbcf09adcafbe0480f59
+* Failed to change slave wallet from owner: https://kovan.etherscan.io/tx/0x076705decfc7d1e64ed27550ba6370767e3664719f4233df5ad0e8d71c3a2746
+* Failed to change slave wallet percent from owner: https://kovan.etherscan.io/tx/0xf303aed1bdc483b60e20265b2d4efc5d19634068bca446266d1e09aac884b914
+* Mainsale finishMinting: https://kovan.etherscan.io/tx/0x20a93b8d5807d945200157c65b8f2ffa2ce4d4e9678a89ca619a4d5e1ff1b6fd, 89.573170731707317073 VST - founders tokens, 34.451219512195121951 VST - bounty tokens.
+* Can't direct mint after crowdsale finished: https://kovan.etherscan.io/tx/0x25bf679333908b5aa56d5954e20ed68f43fda75a0af9d02dc868add22a2339c4
 
 #### Transfer tokens transactions
+* Transfer tokens during mainsale: https://kovan.etherscan.io/tx/0x386dfe75e8709b88f9e8cc5af6488af868dde058465d50bc69e0deba7652ff25
+* Transfer tokens after all crowdsales finished: https://kovan.etherscan.io/tx/0x6369d986fcd9eb35b55fa6d495af9809d5fa2cff8a97105ca5c4355c1e132375
+* Transfer tokens after all crowdsales finished from bounty wallet: https://kovan.etherscan.io/tx/0x1ff006542cd638a2213db8058fc8889116b5312b625aef7f3540006f7a76655e
+* Can't transfer tokens after all crowdsales finished from founders wallet (during lock period): https://kovan.etherscan.io/tx/0xc593033d77a687cc82b970fce117b57164bc2cad41af80f64394eb57869061e7
  
 
 
