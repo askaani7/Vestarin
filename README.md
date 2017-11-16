@@ -211,6 +211,8 @@ _Milestones_
 * _0x4755815de8906C49b05705a06e8788bfE3bCaa33_ - 1.2 ETH invested => 60 VST tokens, https://kovan.etherscan.io/tx/0xa09d43edc039d71bb2a1502694fa6bf32ba32cde1d2138b4fb44a832fd377de8, 0.14 ETH => to master wallet, 0.06 to slave wallet
 
 ##### Mainsale
+* _0xb8600b335332724Df5108Fc0595002409c2ADbC6_ - 1.1 ETH invested => 220 VST tokens, transaction: https://kovan.etherscan.io/tx/0x627fd2f06d2719072e35583983b87d959f0aa46b374f2a1abfdeba43c25c1e2c, 0.77 ETH => to master wallet, 0.33 to slave wallet
+* Driect mint transaction: https://kovan.etherscan.io/tx/0x3a4a1dcd5fcb98e05206c617fd839f1aaf4122aa10fdb7b260e90224e29eeb8d, driect invested 1 ETH, minted 100 VST to 0xb8600b335332724Df5108Fc0595002409c2ADbC6
 
 ##### Service operations
 * Presale finishMinting: https://kovan.etherscan.io/tx/0xdc63e5aaaed73388b62b530ef5f1f771cb896a95072dbd82874684e3c0fbcbd7
