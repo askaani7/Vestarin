@@ -9,12 +9,13 @@
 * _Emission_        : Mintable
 * _Crowdsales_      : 2
 * _Fiat dependency_ : No
-* _Tokens locked_   : No
+* _Tokens locked_   : Available
 
 ## Smart-contracts description
 
 Contract mint bounty and founders tokens after main sale stage finished. 
 Crowdsale contracts have special function to retrieve transferred in errors tokens.
+Also crowdsale contracts have special function to direct mint tokens in wei value (featue implemneted to support external pay gateway).
 
 ### Contracts contains
 1. _VestarinToken_ - Token contract
@@ -28,7 +29,8 @@ To start working with contract you should follow next steps:
 2. Deploy bytecode with MyEtherWallet. Gas 5100000 (actually 5073514).
 3. Call 'deploy' function on addres from (3). Gas 4000000 (actually 3979551). 
 
-Contract manager must call finishMinting after each crowdsale milestone! 
+Contract manager must call finishMinting after each crowdsale milestone!
+To support external mint service manager should specify address by calling _setDirectMintAgent_. After that specified address can direct mint VST tokens by calling _directMint_.
 
 ### How to invest
 To purchase tokens investor should send ETH (more than minimum 0.1 ETH) to corresponding crowdsale contract.
