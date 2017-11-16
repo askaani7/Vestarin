@@ -58,14 +58,14 @@ Maximum tokens can mint - 20 000 000 VST
 * _Bounty tokens percent_       : 5% of Presale tokens
 * _Founders tokens percent_     : 13% of Presale tokens
 * _For sale tokens percent_     : 82% of Presale tokens
-* _Founders tokens wallet_      : 
-* _Bounty tokens wallet_        :
+* _Founders tokens wallet_      : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
+* _Bounty tokens wallet_        : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 * _Founders tokens lock period_ : 90 days
 
 ### Links
-1. _Token_ - 
-2. _Presale_ - 
-3. _Mainsale_ - 
+1. _Token_ - https://etherscan.io/token/0x1908ec0d3e5ae7917a0999375c725b08f705dd7e
+2. _Presale_ - https://etherscan.io/address/0x6904cfa3ebd1b845b1c3a6a141ebb18720a3f36d
+3. _Mainsale_ - https://etherscan.io/address/0xdf58f682228554d4db7aab2dd3cb82ea677246a9
 
 ### Crowdsale stages
 
@@ -74,21 +74,21 @@ Maximum tokens can mint - 20 000 000 VST
 * _Price_                      : 300 VST
 * _Period_                     : 30 days
 * _Start_                      : 30.01.2018 01:00 GMT
-* _Master wallet_              : 
-* _Slave wallet_               : 
+* _Master wallet_              : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
+* _Slave wallet_               : 0x070EcC35a3212D76ad443d529216a452eAA35E3D
 * _Master wallet percent_      : 70%
 * _Slave wallet percent_       : 30%
-* _Contract owner_             : 
+* _Contract owner_             : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 
 #### ICO
 * _Hardcap_                    : 100000 ETH
 * _Period_                     : 30 days
 * _Start_                      : 05.03.2018 01:00 GMT
-* _Master wallet_              : 
-* _Slave wallet_               : 
+* _Master wallet_              : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
+* _Slave wallet_               : 0x070EcC35a3212D76ad443d529216a452eAA35E3D
 * _Master wallet percent_      : 70%
 * _Slave wallet percent_       : 30%
-* _Contract owner_             : 
+* _Contract owner_             : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 
 _Milestones_
 1. hardcap  5000 ETH, price 200 per ETH
