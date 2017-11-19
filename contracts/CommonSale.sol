@@ -76,7 +76,7 @@ contract CommonSale is StagedCrowdsale {
     Stage storage stage = stages[stageIndex];
     uint tokens = weiInvested.mul(stage.price);
     token.mint(this, tokens);
-    token.mint(to, tokens);
+    token.transfer(to, tokens);
     totalTokensMinted = totalTokensMinted.add(tokens);
     totalInvested = totalInvested.add(weiInvested);
     stage.invested = stage.invested.add(weiInvested);
