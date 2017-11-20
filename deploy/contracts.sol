@@ -222,11 +222,10 @@ contract Ownable {
  * @dev Issue: * https://github.com/OpenZeppelin/zeppelin-solidity/issues/120
  * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol
  */
-
 contract MintableToken is StandardToken, Ownable {
-    
+
   event Mint(address indexed to, uint256 amount);
-  
+
   event MintFinished();
 
   bool public mintingFinished = false;
@@ -257,7 +256,7 @@ contract MintableToken is StandardToken, Ownable {
     return true;
   }
 
-  
+
 }
 
 /**
@@ -525,7 +524,6 @@ contract CommonSale is StagedCrowdsale {
     ERC20 alienToken = ERC20(anotherToken);
     alienToken.transfer(to, alienToken.balanceOf(this));
   }
-
 
 }
 

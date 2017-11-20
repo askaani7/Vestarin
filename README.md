@@ -9,7 +9,7 @@
 * _Emission_        : Mintable
 * _Crowdsales_      : 2
 * _Fiat dependency_ : No
-* _Tokens locked_   : Available
+* _Tokens locked_   : Yes
 
 ## Smart-contracts description
 
