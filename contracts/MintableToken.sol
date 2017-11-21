@@ -14,7 +14,7 @@ contract MintableToken is StandardToken, Ownable {
   address public saleAgent;
 
   modifier notLocked() {
-    require(msg.sender == owner || msg.sedner == saleAgent || !mintingFinished);
+    require(msg.sender == owner || msg.sender == saleAgent || mintingFinished);
     _;
   }
 

@@ -65,9 +65,9 @@ Maximum tokens can mint - 20 000 000 VST
 * _Founders tokens lock period_ : 90 days
 
 ### Links
-1. _Token_ - https://etherscan.io/address/0x9fe2903c4e08821f05e5347c71d7d20d7dd8c59c
-2. _Presale_ - https://etherscan.io/token/0x935ee7a4889867106762a7745aa39c80ca51c5ec
-3. _Mainsale_ - https://etherscan.io/address/0xe25c208bbef3ee313e841340e91db2d873f104cd
+1. _Token_ - https://etherscan.io/token/0xad04792a111ecd71c48087059d09d83553e5f878
+2. _Presale_ - https://etherscan.io/address/0xbe46b1e6bddc1e1fcf004c9ed6784c9e0cee1038
+3. _Mainsale_ - https://etherscan.io/address/0xbe46b1e6bddc1e1fcf004c9ed6784c9e0cee1038
 
 ### Crowdsale stages
 
