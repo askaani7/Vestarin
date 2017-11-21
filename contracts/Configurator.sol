@@ -15,7 +15,7 @@ contract Configurator is Ownable {
   Mainsale public mainsale;
 
   function deploy() public onlyOwner {
-    owner = 0x95EA6A4ec9F80436854702e5F05d238f27166A03;
+    //owner = 0x95EA6A4ec9F80436854702e5F05d238f27166A03;
 
     token = new VestarinToken();
 
