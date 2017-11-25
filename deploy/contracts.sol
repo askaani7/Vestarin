@@ -556,8 +556,7 @@ contract Mainsale is CommonSale {
   function finishMinting() public whenNotPaused onlyOwner {
     uint summaryTokensPercent = bountyTokensPercent + foundersTokensPercent;
     uint mintedTokens = token.totalSupply();
-    uint summaryFoundersTokens = mintedTokens.mul(summaryTokensPercent).div(percentRate.sub(summaryTokensPercent));
-    uint totalSupply = summaryFoundersTokens + mintedTokens;
+    uint totalSupply = mintedTokens.mul(percentRate).div(percentRate.sub(summaryTokensPercent));
     uint foundersTokens = totalSupply.mul(foundersTokensPercent).div(percentRate);
     uint bountyTokens = totalSupply.mul(bountyTokensPercent).div(percentRate);
     token.mint(this, foundersTokens);
