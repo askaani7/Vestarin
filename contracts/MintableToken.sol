@@ -13,6 +13,11 @@ contract MintableToken is StandardToken, Ownable {
 
   address public saleAgent;
 
+  modifier notLocked() {
+    require(msg.sender == owner || msg.sender == saleAgent || mintingFinished);
+    _;
+  }
+
   function setSaleAgent(address newSaleAgnet) public {
     require(msg.sender == saleAgent || msg.sender == owner);
     saleAgent = newSaleAgnet;
@@ -37,5 +42,12 @@ contract MintableToken is StandardToken, Ownable {
     return true;
   }
 
+  function transfer(address _to, uint256 _value) public notLocked returns (bool) {
+    return super.transfer(_to, _value);
+  }
+
+  function transferFrom(address from, address to, uint256 value) public notLocked returns (bool) {
+    return super.transferFrom(from, to, value);
+  }
   
 }

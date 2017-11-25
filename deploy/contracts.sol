@@ -216,13 +216,6 @@ contract Ownable {
 
 }
 
-/**
- * @title Mintable token
- * @dev Simple ERC20 Token example, with mintable token creation
- * @dev Issue: * https://github.com/OpenZeppelin/zeppelin-solidity/issues/120
- * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol
- */
-
 contract MintableToken is StandardToken, Ownable {
     
   event Mint(address indexed to, uint256 amount);
@@ -232,6 +225,11 @@ contract MintableToken is StandardToken, Ownable {
   bool public mintingFinished = false;
 
   address public saleAgent;
+
+  modifier notLocked() {
+    require(msg.sender == owner || msg.sender == saleAgent || mintingFinished);
+    _;
+  }
 
   function setSaleAgent(address newSaleAgnet) public {
     require(msg.sender == saleAgent || msg.sender == owner);
@@ -257,6 +255,13 @@ contract MintableToken is StandardToken, Ownable {
     return true;
   }
 
+  function transfer(address _to, uint256 _value) public notLocked returns (bool) {
+    return super.transfer(_to, _value);
+  }
+
+  function transferFrom(address from, address to, uint256 value) public notLocked returns (bool) {
+    return super.transferFrom(from, to, value);
+  }
   
 }
 
@@ -440,6 +445,8 @@ contract CommonSale is StagedCrowdsale {
   address public masterWallet;
 
   address public slaveWallet;
+  
+  address public directMintAgent;
 
   uint public slaveWalletPercent = 30;
 
@@ -448,15 +455,30 @@ contract CommonSale is StagedCrowdsale {
   uint public minPrice;
 
   uint public totalTokensMinted;
+  
+  bool public slaveWalletInitialized;
+  
+  bool public slaveWalletPercentInitialized;
 
   VestarinToken public token;
+  
+  modifier onlyDirectMintAgentOrOwner() {
+    require(directMintAgent == msg.sender || owner == msg.sender);
+    _;
+  }
+  
+  function setDirectMintAgent(address newDirectMintAgent) public onlyOwner {
+    directMintAgent = newDirectMintAgent;
+  }
   
   function setMinPrice(uint newMinPrice) public onlyOwner {
     minPrice = newMinPrice;
   }
 
   function setSlaveWalletPercent(uint newSlaveWalletPercent) public onlyOwner {
+    require(!slaveWalletPercentInitialized);
     slaveWalletPercent = newSlaveWalletPercent;
+    slaveWalletPercentInitialized = true;
   }
 
   function setMasterWallet(address newMasterWallet) public onlyOwner {
@@ -464,27 +486,37 @@ contract CommonSale is StagedCrowdsale {
   }
 
   function setSlaveWallet(address newSlaveWallet) public onlyOwner {
+    require(!slaveWalletInitialized);
     slaveWallet = newSlaveWallet;
+    slaveWalletInitialized = true;
   }
   
   function setToken(address newToken) public onlyOwner {
     token = VestarinToken(newToken);
   }
 
+  function directMint(address to, uint investedWei) public onlyDirectMintAgentOrOwner saleIsOn {
+    mintTokens(to, investedWei);
+  }
+
   function createTokens() public whenNotPaused payable {
     require(msg.value >= minPrice);
-    uint stageIndex = currentStage();
     uint masterValue = msg.value.mul(percentRate.sub(slaveWalletPercent)).div(percentRate);
     uint slaveValue = msg.value.sub(masterValue);
     masterWallet.transfer(masterValue);
     slaveWallet.transfer(slaveValue);
+    mintTokens(msg.sender, msg.value);
+  }
+
+  function mintTokens(address to, uint weiInvested) internal {
+    uint stageIndex = currentStage();
     Stage storage stage = stages[stageIndex];
-    uint tokens = msg.value.mul(stage.price);
+    uint tokens = weiInvested.mul(stage.price);
     token.mint(this, tokens);
-    token.transfer(msg.sender, tokens);
+    token.transfer(to, tokens);
     totalTokensMinted = totalTokensMinted.add(tokens);
-    totalInvested = totalInvested.add(msg.value);
-    stage.invested = stage.invested.add(msg.value);
+    totalInvested = totalInvested.add(weiInvested);
+    stage.invested = stage.invested.add(weiInvested);
     if(stage.invested >= stage.hardcap) {
       stage.closed = now;
     }
@@ -498,7 +530,6 @@ contract CommonSale is StagedCrowdsale {
     ERC20 alienToken = ERC20(anotherToken);
     alienToken.transfer(to, alienToken.balanceOf(this));
   }
-
 
 }
 
@@ -579,6 +610,8 @@ contract TestConfigurator is Ownable {
   Mainsale public mainsale;
 
   function deploy() public onlyOwner {
+    owner = 0x445c94f566abF8E28739c474c572D356d03Ad999;
+
     token = new VestarinToken();
 
     presale = new Presale();
@@ -588,8 +621,8 @@ contract TestConfigurator is Ownable {
     presale.setMasterWallet(0x055fa3f2DAc0b9Db661A4745965DDD65490d56A8);
     presale.setSlaveWallet(0x055fa3f2DAc0b9Db661A4745965DDD65490d56A8);
     presale.setSlaveWalletPercent(30);
-    presale.setStart(1510444800);
-    presale.setPeriod(2);
+    presale.setStart(1510704000);
+    presale.setPeriod(1);
     presale.setMinPrice(100000000000000000);
     token.setSaleAgent(presale);	
 
@@ -603,7 +636,7 @@ contract TestConfigurator is Ownable {
     mainsale.setSlaveWalletPercent(30);
     mainsale.setFoundersTokensWallet(0x59b398bBED1CC6c82b337B3Bd0ad7e4dCB7d4de3);
     mainsale.setBountyTokensWallet(0x555635F2ea026ab65d7B44526539E0aB3874Ab24);
-    mainsale.setStart(1507467600);
+    mainsale.setStart(1510790400);
     mainsale.setPeriod(2);
     mainsale.setLockPeriod(1);
     mainsale.setMinPrice(100000000000000000);
@@ -628,14 +661,16 @@ contract Configurator is Ownable {
   Mainsale public mainsale;
 
   function deploy() public onlyOwner {
+    owner = 0x95EA6A4ec9F80436854702e5F05d238f27166A03;
+
     token = new VestarinToken();
 
     presale = new Presale();
 
     presale.setToken(token);
     presale.addStage(5000,300);
-    presale.setMasterWallet(0x0);
-    presale.setSlaveWallet(0x0);
+    presale.setMasterWallet(0x95EA6A4ec9F80436854702e5F05d238f27166A03);
+    presale.setSlaveWallet(0x070EcC35a3212D76ad443d529216a452eAA35E3D);
     presale.setSlaveWalletPercent(30);
     presale.setStart(1517317200);
     presale.setPeriod(30);
@@ -651,11 +686,11 @@ contract Configurator is Ownable {
     mainsale.addStage(20000,160);
     mainsale.addStage(20000,150);
     mainsale.addStage(40000,130);
-    mainsale.setMasterWallet(0x0);
-    mainsale.setSlaveWallet(0x0);
+    mainsale.setMasterWallet(0x95EA6A4ec9F80436854702e5F05d238f27166A03);
+    mainsale.setSlaveWallet(0x070EcC35a3212D76ad443d529216a452eAA35E3D);
     mainsale.setSlaveWalletPercent(30);
-    mainsale.setFoundersTokensWallet(0x0);
-    mainsale.setBountyTokensWallet(0x0);
+    mainsale.setFoundersTokensWallet(0x95EA6A4ec9F80436854702e5F05d238f27166A03);
+    mainsale.setBountyTokensWallet(0x95EA6A4ec9F80436854702e5F05d238f27166A03);
     mainsale.setStart(1525352400);
     mainsale.setPeriod(30);
     mainsale.setLockPeriod(90);
