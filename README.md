@@ -47,12 +47,12 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ## Token counts
 
-Maximum tokens can mint - 20 000 000 VST 
-* on all crowdsales : 82% or 16 500 000 VST 
-* on presale : 7% or 1 500 000 VST 
-* on mainsale : 75% or 15 000 000 VST
-* to founders : 13% or 2 500 000 VST
-* to bounty : 5% or 1 000 000 VST
+Maximum tokens can mint - 200 000 000 VST 
+* on all crowdsales : 82% or 165 000 000 VST 
+* on presale : 7% or 15 000 000 VST 
+* on mainsale : 75% or 150 000 000 VST
+* to founders : 13% or 25 000 000 VST
+* to bounty : 5% or 10 000 000 VST
 
 ## Main network configuration
 
@@ -65,15 +65,15 @@ Maximum tokens can mint - 20 000 000 VST
 * _Founders tokens lock period_ : 90 days
 
 ### Links
-1. _Token_ - https://etherscan.io/token/0xad04792a111ecd71c48087059d09d83553e5f878
-2. _Presale_ - https://etherscan.io/address/0xbe46b1e6bddc1e1fcf004c9ed6784c9e0cee1038
-3. _Mainsale_ - https://etherscan.io/address/0xbe46b1e6bddc1e1fcf004c9ed6784c9e0cee1038
+1. _Token_ - https://etherscan.io/token/0x552ed8253f341fb770e8badff5a0e0ee2fd57b43
+2. _Presale_ - https://etherscan.io/address/0x16ac88dd8b5be520d6a14f4c0963d8249161ab98
+3. _Mainsale_ - https://etherscan.io/address/0x5cb2b9caa0fe6aeb18707ed8240218fa49085588
 
 ### Crowdsale stages
 
 #### Presale
 * _Hardcap_                    : 5000 ETH
-* _Price_                      : 300 VST
+* _Price_                      : 3000 VST
 * _Period_                     : 30 days
 * _Start_                      : 30.01.2018 01:00 GMT
 * _Master wallet_              : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
@@ -93,12 +93,12 @@ Maximum tokens can mint - 20 000 000 VST
 * _Contract owner_             : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 
 _Milestones_
-1. hardcap  5000 ETH, price 200 per ETH
-2. hardcap  5000 ETH, price 180 per ETH
-3. hardcap 10000 ETH, price 170 per ETH
-4. hardcap 20000 ETH, price 160 per ETH
-5. hardcap 20000 ETH, price 150 per ETH
-6. hardcap 40000 ETH, price 130 per ETH
+1. hardcap  5000 ETH, price 2000 per ETH
+2. hardcap  5000 ETH, price 1800 per ETH
+3. hardcap 10000 ETH, price 1700 per ETH
+4. hardcap 20000 ETH, price 1600 per ETH
+5. hardcap 20000 ETH, price 1500 per ETH
+6. hardcap 40000 ETH, price 1300 per ETH
 
 
 ## Kovan network configuration 1
