@@ -66,8 +66,8 @@ Maximum tokens can mint - 200 000 000 VST
 
 ### Links
 1. _Token_ - https://etherscan.io/token/0x552ed8253f341fb770e8badff5a0e0ee2fd57b43
-2. _Presale_ - https://etherscan.io/address/0x16ac88dd8b5be520d6a14f4c0963d8249161ab98
-3. _Mainsale_ - https://etherscan.io/address/0x5cb2b9caa0fe6aeb18707ed8240218fa49085588
+2. _Presale_ - https://etherscan.io/address/0xcf768b4d181048bb5e0e6e1a9546033483779753
+3. _Mainsale_ - https://etherscan.io/address/0xf52ab948fe5c7d0eb03efbf6c60f7112cbc8ea89
 
 ### Crowdsale stages
 
@@ -78,8 +78,8 @@ Maximum tokens can mint - 200 000 000 VST
 * _Start_                      : 30.01.2018 01:00 GMT
 * _Master wallet_              : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 * _Slave wallet_               : 0x070EcC35a3212D76ad443d529216a452eAA35E3D
-* _Master wallet percent_      : 70%
-* _Slave wallet percent_       : 30%
+* _Master wallet percent_      : 50%
+* _Slave wallet percent_       : 50%
 * _Contract owner_             : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 
 #### ICO
@@ -88,8 +88,8 @@ Maximum tokens can mint - 200 000 000 VST
 * _Start_                      : 05.03.2018 01:00 GMT
 * _Master wallet_              : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 * _Slave wallet_               : 0x070EcC35a3212D76ad443d529216a452eAA35E3D
-* _Master wallet percent_      : 70%
-* _Slave wallet percent_       : 30%
+* _Master wallet percent_      : 50%
+* _Slave wallet percent_       : 50%
 * _Contract owner_             : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 
 _Milestones_
