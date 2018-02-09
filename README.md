@@ -47,12 +47,12 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ## Token counts
 
-Maximum tokens can mint - 200 000 000 VST 
-* on all crowdsales : 82% or 165 000 000 VST 
-* on presale : 7% or 15 000 000 VST 
-* on mainsale : 75% or 150 000 000 VST
-* to founders : 13% or 25 000 000 VST
-* to bounty : 5% or 10 000 000 VST
+Maximum tokens can mint - 70 400 000 VST 
+* on all crowdsales : 82% or 57 700 000 VST 
+* on presale : 15% or 10 500 000 VST 
+* on mainsale : 67% or 47 200 000 VST
+* to founders : 13% or 9 200 000 VST
+* to bounty : 5% or 3 500 000 VST
 
 ## Main network configuration
 
@@ -72,7 +72,7 @@ Maximum tokens can mint - 200 000 000 VST
 ### Crowdsale stages
 
 #### Presale
-* _Hardcap_                    : 5000 ETH
+* _Hardcap_                    : 3500 ETH
 * _Price_                      : 3000 VST
 * _Period_                     : 30 days
 * _Start_                      : 30.01.2018 01:00 GMT
@@ -83,7 +83,7 @@ Maximum tokens can mint - 200 000 000 VST
 * _Contract owner_             : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 
 #### ICO
-* _Hardcap_                    : 100000 ETH
+* _Hardcap_                    : 31 500 ETH
 * _Period_                     : 30 days
 * _Start_                      : 05.03.2018 01:00 GMT
 * _Master wallet_              : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
@@ -93,12 +93,12 @@ Maximum tokens can mint - 200 000 000 VST
 * _Contract owner_             : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
 
 _Milestones_
-1. hardcap  5000 ETH, price 2000 per ETH
-2. hardcap  5000 ETH, price 1800 per ETH
-3. hardcap 10000 ETH, price 1700 per ETH
-4. hardcap 20000 ETH, price 1600 per ETH
-5. hardcap 20000 ETH, price 1500 per ETH
-6. hardcap 40000 ETH, price 1300 per ETH
+1. hardcap  1500 ETH, price 2000 per ETH
+2. hardcap  1000 ETH, price 1800 per ETH
+3. hardcap  3000 ETH, price 1700 per ETH
+4. hardcap  7000 ETH, price 1600 per ETH
+5. hardcap  7000 ETH, price 1500 per ETH
+6. hardcap 12000 ETH, price 1300 per ETH
 
 
 ## Kovan network configuration 1
