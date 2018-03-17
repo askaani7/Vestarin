@@ -61,7 +61,7 @@ Maximum tokens can mint - 70 400 000 VST
 * _Founders tokens percent_     : 13% of Presale tokens
 * _For sale tokens percent_     : 82% of Presale tokens
 * _Founders tokens wallet_      : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
-* _Bounty tokens wallet_        : 0x95EA6A4ec9F80436854702e5F05d238f27166A03
+* _Bounty tokens wallet_        : 0x05E87Dc9c075256cB94951e0b35C581b93961885
 * _Founders tokens lock period_ : 90 days
 
 ### Links
